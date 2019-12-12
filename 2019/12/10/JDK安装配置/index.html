@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+  <meta name="description" content="前端学习笔记">
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="Y大壮">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="JDK安装配置"/>
+  
+  <!--Open Graph Description-->
+  
+      <meta property="og:description" content="前端学习笔记" />
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Y大壮的学习笔记"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>JDK安装配置 - Y大壮的学习笔记</title>
+
+
+  <link rel="shortcut icon" href="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/logo_96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/logo.svg" alt="Y大壮的学习笔记" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  主页
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  归档
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about">
+                
+                  关于
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            JDK安装配置
+            
+          </h1>
+          <p class="posted-on">
+          2019-12-10
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/后台环境配置/" rel="tag">
+                  后台环境配置
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content has_line_number">
+          <p>本文旨在说明JDK在Windows与Linux系统安装与配置，避免每次都需百度，反而容易踩坑报错。</p>
+<a id="more"></a>
+
+<h2 id="部署环境"><a href="#部署环境" class="headerlink" title="#部署环境"></a><font color=#4fc08d>#</font>部署环境</h2><ul>
+<li>系统 : Centos 6.8 / Windows 10</li>
+<li>JDK : 7u80</li>
+</ul>
+<h2 id="安装与配置-Windows"><a href="#安装与配置-Windows" class="headerlink" title="#安装与配置(Windows)"></a><font color=#4fc08d>#</font>安装与配置(Windows)</h2><h3 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h3><p><strong>1.++WIN键 + Q++ 搜索 ++环境变量++ 并打开</strong></p>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/JDK%E9%85%8D%E7%BD%AE/2019-12-10_093823.png" class="">
+
+<br/>
+
+<p><strong>2.编辑用户环境变量</strong></p>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/JDK%E9%85%8D%E7%BD%AE/2019-12-10_094055.png" class="">
+
+<br/>
+
+<p><strong>3.新建<code>JAVA_HOME</code>变量 - 变量值为jdk安装目录</strong></p>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/JDK%E9%85%8D%E7%BD%AE/2019-12-10_094315.png" class="">
+
+<br/>
+
+<p><strong>4.编辑<code>Path</code>变量</strong></p>
+<ul>
+<li><p>如为列表模式添加 : </p>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/JDK%E9%85%8D%E7%BD%AE/2019-12-10_095047.png" class="">
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\jre\bin</span></pre></td></tr></table></figure>
+</li>
+<li><p>如为文本模式添加 :</p>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/JDK%E9%85%8D%E7%BD%AE/2019-12-10_095220.png" class="">
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</span></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>注 :</strong> 如文本模式下，原Path变量结尾没有<code>;</code>号，需添加<code>;</code>号后写入以上代码。</p>
+<br/>
+
+<p><strong>5.新建<code>CLASSPATH</code>变量</strong> </p>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/JDK%E9%85%8D%E7%BD%AE/2019-12-10_095716.png" class="">
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar</span></pre></td></tr></table></figure>
+
+
+<p><strong>注 :</strong> 注意变量值前的<code>.</code>号。</p>
+<br/>
+
+<p><strong>6.配置完毕后点击确认</strong></p>
+<br/>
+
+<p><strong>7.检验是否安装完毕</strong></p>
+<ul>
+<li>++WIN键 + R++打开运行，并输入CMD后回车(如在配置环境变量前已打开CMD，建议配置变量后关闭重新打开CMD命令行) : <img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/JDK%E9%85%8D%E7%BD%AE/2019-12-10_100757.png" class="">
+
+
+</li>
+</ul>
+<ul>
+<li><p>在 CMD 中输入 java，检测是否输入下图所示 : </p>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/JDK%E9%85%8D%E7%BD%AE/2019-12-10_100933.png" class="">
+</li>
+<li><p>在 CMD 中输入 javac，检测是否输入下图所示 : </p>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/JDK%E9%85%8D%E7%BD%AE/2019-12-10_101044.png" class="">
+</li>
+<li><p>如输出一致则安装成功</p>
+</li>
+</ul>
+<hr>
+<h2 id="安装与配置-Linux"><a href="#安装与配置-Linux" class="headerlink" title="#安装与配置(Linux)"></a><font color=#4fc08d>#</font>安装与配置(Linux)</h2><h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK :"></a>安装JDK :</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo rpm -ivh jdk-7u80-linux-x64.rpm</span></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="修改环境变量"><a href="#修改环境变量" class="headerlink" title="修改环境变量 :"></a>修改环境变量 :</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">在配置文件末尾加入</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">安装路径</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.7.0_80</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="使配置文件生效"><a href="#使配置文件生效" class="headerlink" title="使配置文件生效"></a>使配置文件生效</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">source /etc/profile</span></pre></td></tr></table></figure>
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+      
+        <div class="nav-next">
+          <a href="/2019/12/09/JS运算符/" rel="prev">下一页 <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          前端学习笔记
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/YaoJianqun" class="icon icon-github" target="_blank">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Y大壮的学习笔记 &copy; 2019</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a></span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+
+
+</body>
+
+</html>

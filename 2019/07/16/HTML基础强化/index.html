@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+  <meta name="description" content="前端学习笔记">
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="Y大壮">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="HTML基础强化"/>
+  
+  <!--Open Graph Description-->
+  
+      <meta property="og:description" content="前端学习笔记" />
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Y大壮的学习笔记"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>HTML基础强化 - Y大壮的学习笔记</title>
+
+
+  <link rel="shortcut icon" href="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/logo_96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/logo.svg" alt="Y大壮的学习笔记" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  主页
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  归档
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about">
+                
+                  关于
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            HTML基础强化
+            
+          </h1>
+          <p class="posted-on">
+          2019-07-16
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/系统梳理CSS工作应用/" rel="tag">
+                  系统梳理CSS工作应用
+                </a>
+              
+                <a href="/tags/css/" rel="tag">
+                  css
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content has_line_number">
+          <p>HTML常见元素、版本（HTML4/XHTML/HTML5的关系）以及HTML元素的分类和嵌套关系。关注元素默认样式和定制化。</p>
+<a id="more"></a>
+
+<h3 id="HTML常见元素和理解"><a href="#HTML常见元素和理解" class="headerlink" title="#HTML常见元素和理解"></a><font color=#4fc08d>#</font>HTML常见元素和理解</h3><p>声明页面编码格式 :</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- html4写法 --&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">heep-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- html5写法 --&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span></pre></td></tr></table></figure>
+<br/>
+
+<p>视口(viewport) :</p>
+<ul>
+<li>width=device-width  视口宽度为设备宽度</li>
+<li>initial-scale=1.0   初始化缩放比例为1 </li>
+<li>maximum-scale=1.0     最大缩放比例为1</li>
+<li>user-scalable=no      不允许用户自由缩放</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, </span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag"><span class="string">maximum-scale=1.0, user-scalable=no"</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<br/>
+
+<p>声明IE浏览器解析网页时使用的文档模式 :</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<br/>
+
+<p>指定基础路径，页面所有链接都会加入基础路径 :</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">"/"</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<br/>
+
+<p>HTML语义化</p>
+<blockquote>
+<p>HTML文档语义化检查工具 <a href="http://h5o.github.io" target="_blank" rel="noopener">http://h5o.github.io</a></p>
+</blockquote>
+<br/>
+
+<h3 id="HTML版本"><a href="#HTML版本" class="headerlink" title="#HTML版本"></a><font color=#4fc08d>#</font>HTML版本</h3><blockquote>
+<p>HTML结构是否正确验证工具 <a href="https://validator.w3.org" target="_blank" rel="noopener">https://validator.w3.org</a></p>
+</blockquote>
+<ul>
+<li>HTML4/4.01基于(SGML),SGML为XML的超集</li>
+<li>XHTML基于(XML)–最严格</li>
+<li>HTML5</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">HTML4</th>
+<th align="center">XHTML</th>
+<th align="center">HTML5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">标签允许不结束</td>
+<td align="center">标签必须结束</td>
+<td align="center">标签允许不结束</td>
+</tr>
+<tr>
+<td align="center">属性不用带引号</td>
+<td align="center">属性必须带引号</td>
+<td align="center">属性不用带引号</td>
+</tr>
+<tr>
+<td align="center">标签属性可大写</td>
+<td align="center">标签属性必须小写</td>
+<td align="center">标签属性可大写</td>
+</tr>
+<tr>
+<td align="center">Boolean属性可省略</td>
+<td align="center">Boolean属性不可省略</td>
+<td align="center">Boolean属性可省略</td>
+</tr>
+</tbody></table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"test"</span>&gt;</span>合法<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">DIV</span> <span class="attr">class</span>=<span class="string">"test"</span>&gt;</span>标签名大写<span class="tag">&lt;/<span class="name">DIV</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">ID</span>=<span class="string">"test"</span>&gt;</span>属性名大写<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>标签不结束</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">color:red</span>&gt;</span>属性不加引号<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<br/>
+
+<p>HTML5新增区块标签</p>
+<ul>
+<li>section</li>
+<li>article</li>
+<li>nav</li>
+<li>aside</li>
+</ul>
+<p>HTML5新增表单增强</p>
+<ul>
+<li>日期、时间、搜索</li>
+<li>表单验证</li>
+<li>placeholder</li>
+</ul>
+<p>HTML5新增语义</p>
+<ul>
+<li>header/footer 头尾</li>
+<li>section/article 区域</li>
+<li>nav 导航</li>
+<li>aside 不重要内容</li>
+<li>em/strong 强调</li>
+<li>i icon 表示图标</li>
+</ul>
+<br/>
+
+<h3 id="HTML元素分类"><a href="#HTML元素分类" class="headerlink" title="#HTML元素分类"></a><font color=#4fc08d>#</font>HTML元素分类</h3><p>按默认样式分</p>
+<ul>
+<li>块级 block</li>
+<li>行内 inline</li>
+<li>inline-block</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>块级元素<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>行内元素<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>行内元素<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">select</span>&gt;</span><span class="tag">&lt;<span class="name">option</span>&gt;</span>下拉框<span class="tag">&lt;/<span class="name">option</span>&gt;</span><span class="tag">&lt;/<span class="name">select</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>select为行内块元素<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></pre></td></tr></table></figure>
+<br/>
+
+<p>按内容分</p>
+<blockquote>
+<p>元素分布图 <a href="https://html.spec.whatwg.org/multipage/dom.html#phrasing-content" target="_blank" rel="noopener">https://html.spec.whatwg.org/multipage/dom.html#phrasing-content</a></p>
+</blockquote>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/html_fb.png" class=""> 
+
+<ul>
+<li>flow 文档流中的元素</li>
+<li>interactive 于用户有交互的元素 a, button</li>
+<li>embedded 嵌入外部资源元素 video</li>
+<li>heading h1-h6</li>
+<li>metadata 头部meta元素</li>
+<li>phrasing 短语元素 em、strong</li>
+<li>sectioning 区域块级元素 section</li>
+</ul>
+<br/>
+
+<h3 id="HTML元素嵌套关系"><a href="#HTML元素嵌套关系" class="headerlink" title="#HTML元素嵌套关系"></a><font color=#4fc08d>#</font>HTML元素嵌套关系</h3><p>适用html4，部分适用html5</p>
+<ul>
+<li>块级元素可以包含行内元素</li>
+<li>块级元素不一定能包含块级元素</li>
+<li>行内元素一般不能包含块级元素<ul>
+<li>a元素可以包含块级元素<br>注:a元素在浏览器计算内容模型的时候时不参与计算的，所以在渲染时a不存在</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span>&gt;</span>DIV &amp;gt; A<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">&lt;!-- 计算内容模型时a标签不参与计算，所以相当于body包含div标签 --&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>A &amp;gt; DIV<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">&lt;!-- a标签不参与计算,所以是p包含div，不合法 --&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>P &amp;gt; A &amp;gt; DIV<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="默认样式和RESET"><a href="#默认样式和RESET" class="headerlink" title="#默认样式和RESET"></a><font color=#4fc08d>#</font>默认样式和RESET</h3><blockquote>
+<p>css重置样式库<a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">https://necolas.github.io/normalize.css/</a></p>
+</blockquote>
+<p>保留所有元素的margin、padding等默认样式，尽可能的将所有浏览器默认样式重置为相同样式</p>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/2019/08/06/JS中的call、apply、bind方法/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> 上一页</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/2019/07/14/hello-world/" rel="prev">下一页 <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          前端学习笔记
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/YaoJianqun" class="icon icon-github" target="_blank">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Y大壮的学习笔记 &copy; 2019</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a></span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+
+
+</body>
+
+</html>

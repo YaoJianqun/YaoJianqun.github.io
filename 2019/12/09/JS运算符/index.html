@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+  <meta name="description" content="前端学习笔记">
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="Y大壮">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="JS运算符"/>
+  
+  <!--Open Graph Description-->
+  
+      <meta property="og:description" content="前端学习笔记" />
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Y大壮的学习笔记"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>JS运算符 - Y大壮的学习笔记</title>
+
+
+  <link rel="shortcut icon" href="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/logo_96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/logo.svg" alt="Y大壮的学习笔记" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  主页
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  归档
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about">
+                
+                  关于
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            JS运算符
+            
+          </h1>
+          <p class="posted-on">
+          2019-12-09
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/JS细节知识点/" rel="tag">
+                  JS细节知识点
+                </a>
+              
+                <a href="/tags/JS/" rel="tag">
+                  JS
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content has_line_number">
+          <p>本文旨在彻底弄清在平时并不常用或是使用时容易出现歧义、模糊的js运算符，对于平时常用的运算符不做探讨研究</p>
+<a id="more"></a>
+
+<h2 id="JS逻辑运算符-amp-amp"><a href="#JS逻辑运算符-amp-amp" class="headerlink" title="#JS逻辑运算符  ||  &amp;&amp;"></a><font color=#4fc08d>#</font>JS逻辑运算符  ||  &amp;&amp;</h2><h3 id="逻辑与、短路与-amp-amp-逻辑或、短路或"><a href="#逻辑与、短路与-amp-amp-逻辑或、短路或" class="headerlink" title="逻辑与、短路与( &amp;&amp; ) / 逻辑或、短路或( || )"></a>逻辑与、短路与( &amp;&amp; ) / 逻辑或、短路或( || )</h3><p><strong>作用：</strong></p>
+<p><code>a &amp;&amp; b</code> 左右两侧同为true时返回true，其中一侧为false时返回false。</p>
+<p><code>a || b</code> 左右两侧其中一侧为true时返回true，同为false时返回false。</p>
+<p><strong>延申：</strong></p>
+<p> <code>&amp;&amp;</code> 在执行左侧为false后，右侧表达式不再执行</p>
+<p><code>||</code> 在执行左侧为true时，右侧表达式不再执行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> b = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span> &amp;&amp; <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;a = <span class="number">2</span>; <span class="keyword">return</span> <span class="string">'abc123'</span>&#125;());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span> || <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;b = <span class="number">2</span>; <span class="keyword">return</span> <span class="string">'abc123'</span>&#125;());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(b);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//结果：a = 1; b = 1;</span></span></pre></td></tr></table></figure>
+
+<p>相对短路与&amp;&amp; - 按位与 / 短路或||&amp; - 按位或</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> b = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span> &amp; <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;a = <span class="number">2</span>; <span class="keyword">return</span> <span class="string">'abc123'</span>&#125;());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span> | <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;b = <span class="number">2</span>; <span class="keyword">return</span> <span class="string">'abc123'</span>&#125;());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(b);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//结果：a = 2; b = 2;</span></span></pre></td></tr></table></figure>
+
+<p>按位与/按位或，由于存在强制类型转换，在判断数字时会执行强制类型转换，使用位运算，故不做逻辑运算使用。</p>
+<br/>
+
+<hr>
+<h2 id="JS位运算符-amp-lt-lt-gt-gt-gt-gt-gt-符"><a href="#JS位运算符-amp-lt-lt-gt-gt-gt-gt-gt-符" class="headerlink" title="#JS位运算符 &amp; | ~ ^ &lt;&lt; &gt;&gt; &gt;&gt;&gt;符"></a><font color=#4fc08d>#</font>JS位运算符 &amp; | ~ ^ &lt;&lt; &gt;&gt; &gt;&gt;&gt;符</h2><h3 id="按位与-amp-按位或"><a href="#按位与-amp-按位或" class="headerlink" title="按位与( &amp; ) / 按位或( | )"></a>按位与( &amp; ) / 按位或( | )</h3><p><strong>作用：</strong></p>
+<p><code>a &amp; b</code> 用于对两个二进制操作数逐位进行比较，两侧同为true时返回true，见下表所示的换算表结果。</p>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/js%E6%93%8D%E4%BD%9C%E7%AC%A6/and.png" class="">
+
+<p><code>a | b</code> 用于对两个二进制操作数逐位进行比较，一侧为true时返回true，，见下表所示的换算表结果。</p>
+<img src="https://oss-yaodz-source.oss-cn-beijing.aliyuncs.com/Yaodz-Blog/js%E6%93%8D%E4%BD%9C%E7%AC%A6/or.png" class="">
+
+<h3 id="按位非"><a href="#按位非" class="headerlink" title="按位非( ~ )"></a>按位非( ~ )</h3><p><strong>作用：</strong></p>
+<p><code>~a</code> 用于对一个二进制操作数逐位进行取反操作。</p>
+<p>运算步骤 ( ~1 )：</p>
+<ul>
+<li>把<code>1</code>数转换为 32 位的二进制整数 = <code>0000 ··· 0001</code>;</li>
+<li>按位取反<code>1111 ··· 1110</code>;</li>
+<li>最高位即为符号位 ( 1为负数 )，将除符号位之外的其他数字取反 = <code>1000 ··· 0001</code>;</li>
+<li>末位加1取其补码 = <code>1000 ··· 0010</code>;</li>
+<li>转换为二进制 = <code>-2</code>;</li>
+</ul>
+<p><strong>延申：</strong></p>
+<p>计算机计算减法的实现原理是，将减法变为加一个负数，而负数则是以补码的形式存储在计算机中;</p>
+<p>实现原理为：<br>如想详细了解计算机运算规则需要了解两个概念：</p>
+<p>反码：将数字的二级制数按位取反得其反码;</p>
+<p>补码：将反码<code>+1</code>为其补码;</p>
+<p>如：</p>
+<ul>
+<li><code>-1</code>的反码为，<code>+1</code>的二级制数<code>00000001</code>按位取反<code>11111110</code></li>
+<li>将<code>-1</code>的反码<code>+1</code>的出<code>-1</code>的补码为<code>11111111</code></li>
+</ul>
+<p>假设计算机存储八位二级制数字，最高可存储<code>11111111</code>十进制也就是<code>255</code>，如果255再加1，二级制数运算结果为<code>100000000</code>依据计算机计算原则，高位溢出，最终的结果为<code>00000000</code>;</p>
+<p>依据此项特性，采用的是补码的方式存储数字,最高位为其符号位，可将减法转换为加一个负数;</p>
+<p>如：</p>
+<p><code>1 + (-1)</code>的二进制计算为<code>00000001 + 11111111</code>,最终结果为<code>00000000</code>十进制结果为<code>0</code>符合十进制运算规则;</p>
+<h3 id="移位运算符-gt-gt-lt-lt-gt-gt-gt"><a href="#移位运算符-gt-gt-lt-lt-gt-gt-gt" class="headerlink" title="移位运算符 ( &gt;&gt; &lt;&lt; &gt;&gt;&gt; )"></a>移位运算符 ( &gt;&gt; &lt;&lt; &gt;&gt;&gt; )</h3><p><strong>待写</strong></p>
+<hr>
+<h2 id="JS类型运算符-typeof-instanceof"><a href="#JS类型运算符-typeof-instanceof" class="headerlink" title="#JS类型运算符  typeof instanceof"></a><font color=#4fc08d>#</font>JS类型运算符  typeof instanceof</h2><p><strong>待写</strong></p>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/2019/12/10/JDK安装配置/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> 上一页</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/2019/12/02/非布局样式/" rel="prev">下一页 <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          前端学习笔记
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/YaoJianqun" class="icon icon-github" target="_blank">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Y大壮的学习笔记 &copy; 2019</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a></span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+
+
+</body>
+
+</html>
